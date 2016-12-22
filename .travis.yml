@@ -17,7 +17,7 @@ before_script:
  - sed 's/Travis_indexName/${indexName}/' _config.yml
 
 script:
-  - hexo clear
+  - hexo clean
   - hexo algolia
   - hexo g  #生成
 
