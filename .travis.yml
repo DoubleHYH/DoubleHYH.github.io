@@ -19,8 +19,8 @@ before_script:
 
 script:
   - hexo clean
-  - hexo algolia
   - hexo g  #生成
+  - hexo algolia
 
 after_script:
   - cd ./public
