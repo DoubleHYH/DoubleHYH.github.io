@@ -11,10 +11,10 @@ install:
 
 
 before_script:
- - sed 's/Travis_applicationID/${applicationID}/' _config.yml
- - sed 's/Travis_apiKey/${apiKey}/' _config.yml
- - sed 's/Travis_adminApiKey/${adminApiKey}/' _config.yml
- - sed 's/Travis_indexName/${indexName}/' _config.yml
+ - sed -i -n 's/Travis_applicationID/${applicationID}/' _config.yml
+ - sed -i -n 's/Travis_apiKey/${apiKey}/' _config.yml
+ - sed -i -n 's/Travis_adminApiKey/${adminApiKey}/' _config.yml
+ - sed -i -n 's/Travis_indexName/${indexName}/' _config.yml
 
 script:
   - hexo clean
