@@ -7,7 +7,7 @@ branches:
 
 # S: Build Lifecycle
 install:
-  # - npm install  #安装hexo及插件
+  - npm install  #安装hexo及插件
 
 
 before_script:
@@ -18,19 +18,18 @@ before_script:
 
 
 script:
- - cat _config.yml
-  # - hexo clean
-  # - hexo algolia
-  # - hexo g  #生成
+  - hexo clean
+  - hexo algolia
+  - hexo g  #生成
 
-# after_script:
-  # - cd ./public
-  # - git init
-  # - git config user.name "doublehyh"
-  # - git config user.email "doublehyh@gmail.com"
-  # - git add .
-  # - git commit -m "Update docs"
-  # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "doublehyh"
+  - git config user.email "doublehyh@gmail.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build Lifecycle
 
 env:
