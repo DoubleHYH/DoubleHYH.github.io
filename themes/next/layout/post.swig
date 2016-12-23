@@ -26,6 +26,8 @@
     </div>
   </div>
 
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+
 {% endblock %}
 
 {% block sidebar %}
@@ -35,7 +37,6 @@
 
 {% block script_extra %}
   {% include '_scripts/pages/post-details.swig' %}
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
   <script>
     var cloudTieConfig = {
       url: document.location.href,
