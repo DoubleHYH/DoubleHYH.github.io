@@ -14,6 +14,7 @@
     {{ post_template.render(page) }}
 
     <div class="post-spread">
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
       {% if theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
       {% elseif theme.baidushare %}
@@ -35,7 +36,6 @@
 
 {% block script_extra %}
   {% include '_scripts/pages/post-details.swig' %}
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
   <script>
     var cloudTieConfig = {
       url: document.location.href,
