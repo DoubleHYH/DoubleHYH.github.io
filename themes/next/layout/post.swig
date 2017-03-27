@@ -14,7 +14,6 @@
     {{ post_template.render(page) }}
 
     <div class="post-spread">
-      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
       {% if theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
       {% elseif theme.baidushare %}
@@ -36,13 +35,4 @@
 
 {% block script_extra %}
   {% include '_scripts/pages/post-details.swig' %}
-  <script>
-    var cloudTieConfig = {
-      url: document.location.href,
-      sourceId: "",
-      productKey: "4388a0ae5cac439b86d7f3ce92384e8a",
-      target: "cloud-tie-wrapper"
-    };
-  </script>
-  <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
 {% endblock %}
