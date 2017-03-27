@@ -9,21 +9,12 @@ branches:
 install:
   - npm install  #安装hexo及插件
 
-
-before_script:
-  - sed -i 's#Travis_applicationID#'$GH_APPID'#g' _config.yml
-  - sed -i 's#Travis_apiKey#'$GH_APIKEY'#g' _config.yml
-  - sed -i 's#Travis_adminApiKey#'$GH_ADMINAPI'#g' _config.yml
-  - sed -i 's#Travis_indexName#'$GH_INDEXNAME'#g' _config.yml
-
-
 script:
   - hexo clean
   - hexo g  #生成
 
 after_script:
   - cd ./public
-  - hexo algolia
   - git init
   - git config user.name "doublehyh"
   - git config user.email "doublehyh@gmail.com"
