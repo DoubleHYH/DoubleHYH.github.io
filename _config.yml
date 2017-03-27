@@ -71,9 +71,3 @@ deploy:
   type:
 
 # seacher
-algolia:
-  applicationID: 'Travis_applicationID'
-  apiKey: 'Travis_apiKey'
-  adminApiKey: 'Travis_adminApiKey'
-  indexName: 'Travis_indexName'
-  chunkSize: 5000
